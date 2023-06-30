@@ -1,29 +1,22 @@
-export const typedef = `#graphql
-type Game{
+export const typeDefs = `#graphql
+  type Game {
     id: ID!
     title: String!
     platform: [String!]!
-}
-type Review{
+  }
+  type Review {
     id: ID!
     rating: Int!
-    platform: String!
-}
-type Author{
+    content: String!
+  }
+  type Author {
     id: ID!
     name: String!
-    varified: Boolean!
-}
-type Query{
+    verified: Boolean!
+  }
+  type Query {
     games: [Game]
     reviews: [Review]
-    authors:[Author]
-}
-
-
-
-
-
+    authors: [Author]
+  }
 `;
-
-//int, float, string, boolean, ID
